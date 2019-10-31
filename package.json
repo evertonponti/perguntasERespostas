@@ -1,0 +1,16 @@
+{
+  "name": "guiaperguntas",
+  "version": "1.0.0",
+  "description": "Plataforma de perguntas e repostas ao estilo Yahoo respostas",
+  "main": "index.js",
+  "author": "Everton Ponti",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mysql2": "^2.0.0",
+    "nodemon": "^1.19.4",
+    "sequelize": "^5.21.2"
+  }
+}

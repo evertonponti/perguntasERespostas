@@ -1,0 +1,17 @@
+<%- include partials/header.ejs %>
+<body>
+    <%- include partials/navbar.ejs %>
+    <div class="container">
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h3><%= pergunta.titulo %></h3>
+                <h9><%= pergunta.descricao %></h9>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary">Responder</button>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include partials/footer.ejs %>
