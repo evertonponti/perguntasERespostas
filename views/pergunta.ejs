@@ -2,16 +2,27 @@
 <body>
     <%- include partials/navbar.ejs %>
     <div class="container">
-        <br>
-        <div class="card">
-            <div class="card-body">
-                <h3><%= pergunta.titulo %></h3>
-                <h9><%= pergunta.descricao %></h9>
+        <hr>
+        <h1><%= pergunta.titulo %></h1>
+        <p><%= pergunta.descricao %></p>
+        <hr>
+        <form method="POST" action="/responder">
+            <h3>Resposta:</h3>
+            <textarea name="corpo" id="" placeholder="Digite sua resposta" class="form-control"></textarea>
+            <br>
+            <input type="hidden" name="perguntaId" value="<%= pergunta.id %>">
+            <button class="btn btn-primary" type="submit">Responder</button>
+        </form>
+        <hr>
+        <h3>Respostas</h3>
+        <% respostas.forEach(resposta => { %>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <%= resposta.corpo %>
+                </div>
             </div>
-            <div class="card-footer">
-                <button class="btn btn-primary">Responder</button>
-            </div>
-        </div>
+        <% }) %>
     </div>
 </body>
 <%- include partials/footer.ejs %>
